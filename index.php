@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css?v=1" />
-    <title>Student Registretion System</title>
+    <title>Student Registration System</title>
   </head>
   <body>
     <section class="form_parent">
       <div class="form_div">
-        <h3>Student Registretion System</h3>
+        <h3>Student Registration System</h3>
         <form
           method="post"
           action="page2.php"
