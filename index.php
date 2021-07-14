@@ -15,7 +15,6 @@
           method="post"
           action="page2.php"
           autocomplete="off"
-          data-netlify="true"
         >
           <div class="form">
             <div class="form_input">
