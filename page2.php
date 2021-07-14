@@ -25,6 +25,8 @@ if (isset($_POST)){
         echo 'values not inserted';
     }
 
+}else{
+    echo 'error';
 }
 ?>
 
