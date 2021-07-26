@@ -1,11 +1,6 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-
-$conn = new mysqli($servername, $username, $password, 'studentdb');
-
+require('./dbconnaction.php');
 
 if (isset($_POST)){
     $fname = $_POST['fname'];
@@ -14,11 +9,11 @@ if (isset($_POST)){
     $dob = $_POST['dob'];
     $email = $_POST['email'];
     $gender = $_POST['gender'];
-
-    $query = "INSERT INTO student (fname,lname,national_id,dob,email,gender) VALUES('$fname', '$lname', '$nid', '$dob', '$email', '$gender')";
-
+    $password = "{$nid}@gmail.com";
+    $query = "INSERT INTO student (fname,lname,national_id,dob,email,gender,password) VALUES('$fname', '$lname', '$nid', '$dob', '$email', '$gender', '$password')";
+    $query2 = "INSERT INTO users (username, password, usertype) VALUES('$email','$password', 0)";
     $result = mysqli_query($conn, $query);
-
+    $result2 = mysqli_query($conn, $query2);
     if($result){
         echo "$fname $lname have registered in the database successfully.";
     }else{

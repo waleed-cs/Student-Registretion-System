@@ -9,20 +9,21 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
-  background-color: #1b1b1b;
+  background-color: #334155;
 }
 .form_parent {
-  height: 60vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  color: white;
+  color: #e2e8f0;
 }
 
 .form_parent > .form_div {
-  height: 60vh;
-  border: 2px solid white;
-  width: 30%;
+  /* border: 2px solid #e2e8f0; */
+  background: #2c3849;
+  border-radius: 5px;
+  padding: 2.4rem;
+  width: fit-content;
 }
 
 .form_div > h3 {
@@ -53,8 +54,8 @@ select {
   padding: 4px;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid white;
-  color: white;
+  border-bottom: 2px solid #e2e8f0;
+  color: #e2e8f0;
   outline: none;
 }
 
@@ -66,7 +67,7 @@ select {
 button {
   margin-top: 1rem;
   padding: 1rem 3rem;
-  border: 3px solid white;
+  border: 3px solid #f8e7cd;
   cursor: pointer;
   background-color: transparent;
   color: white;
@@ -77,8 +78,8 @@ button {
 }
 
 button:hover {
-  background-color: white;
-  color: #1b1b1b;
+  background-color: #334155;
+  color: #e2e8f0;
 }
 
 #gender {
@@ -86,7 +87,14 @@ button:hover {
 }
 
 option {
-  background-color: #1b1b1b;
-  color: #fff;
+  background-color: #334155;
+  color: #e2e8f0;
+  cursor: pointer;
+}
+
+.fa-sign-out-alt {
+  position: absolute;
+  top: 0;
+  right: 5%;
   cursor: pointer;
 }
