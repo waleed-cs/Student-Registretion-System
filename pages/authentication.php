@@ -15,7 +15,7 @@ if(isset($_POST)){
             header('Location:http://localhost/Task2/pages/index.php');
             exit();
         }else{
-            echo 'welcome student';
+            header('Location:http://localhost/Task2/pages/studentEnroll.php');
         }
     }else{  
         echo 'username or password is wrong';
