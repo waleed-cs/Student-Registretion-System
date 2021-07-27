@@ -23,6 +23,7 @@
             echo " <input type='checkbox' name ='course[]' id = '$course[0]' value = '$course[1]'> ";
             echo " <label for= '$course[0]'> $course[1] </label> ";
         }
+        echo $_SESSION['name'];
         ?>
         <button type="submit">Enroll</button>
     </form>
