@@ -17,8 +17,9 @@ if(isset($_POST)){
         }else{
             header('Location:http://localhost/Task2/pages/studentEnroll.php');
         }
-    }else{  
-        echo 'username or password is wrong';
+    }else{
+        echo "<script> document.queryselector('.error_message').style.display = '';  </script>";
+        header('Location:http://localhost/Task2/pages/login.php');
     }
 }else{
     echo 'error';

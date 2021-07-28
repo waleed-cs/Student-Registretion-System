@@ -8,7 +8,8 @@
     <title>Login</title>
 </head>
 <body>
-    <div>
+    <div class="form_parent">
+        <h1>Login</h1>
         <form method="POST" action = "authentication.php" autocomplete="off" >
             <div class="form_input">
                 <label for="username">Username</label>
@@ -20,6 +21,8 @@
             </div>
            <button type="submit">Login</button>
         </form>
+        <p class="error_message">The username or password you provided is incorrect. Please try again.</p>
     </div>
+
 </body>
 </html>
