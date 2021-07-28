@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #334155;
 }
 .form_parent {
