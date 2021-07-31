@@ -62,3 +62,21 @@ header {
   height: 4rem;
   width: 90%;
 }
+.aboutUs {
+  height: 100vh;
+}
+
+.fa-chevron-up {
+  position: fixed;
+  bottom: 10px;
+  right: -40px;
+  cursor: pointer;
+  padding: 0.75rem;
+  background-color: #6c63ff;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.fa-chevron-up.show {
+  right: 10px;
+}
