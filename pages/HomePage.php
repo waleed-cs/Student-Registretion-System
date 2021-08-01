@@ -180,7 +180,19 @@
       </div>
     </main>
     <section id="aboutUS">
-      
+      <div>
+      <h1>About us</h1>
+      <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque esse soluta et consectetur expedita officiis illum ducimus dolorem reiciendis, velit maiores ullam enim consequuntur laboriosam eveniet amet voluptatibus iusto excepturi!
+      Temporibus voluptatum quam, doloremque voluptates eos accusantium aliquam iusto. At laboriosam officia eveniet non adipisci ipsa quidem ipsum quos sint sequi nobis reiciendis magnam aut, error aperiam dolore natus sit?
+      Nostrum, nobis. Esse, porro asperiores. Aliquid numquam perspiciatis fuga voluptates recusandae ex, quas alias est magnam, eveniet nihil mollitia quo ratione, odit officiis hic accusantium? Magnam soluta quas aperiam reprehenderit?
+      Labore sed, dolores earum mollitia aperiam laborum? Eveniet accusamus at earum ea culpa, debitis, dicta officia ducimus dolores sit repellat sunt distinctio quos, magni dolor quisquam pariatur blanditiis architecto cum?
+      Iusto officia atque minima totam labore minus accusantium nobis, exercitationem dolore odio velit dicta tempora adipisci mollitia magni quaerat omnis rem cumque. Fugiat asperiores ullam deserunt alias sequi, voluptatem omnis.
+      Dolores ad eaque nam esse veniam explicabo quis pariatur nesciunt, distinctio voluptates nobis illum consequatur error eligendi excepturi molestias optio debitis ut in enim hic obcaecati impedit perspiciatis eius? Molestias!
+      Eaque ullam ipsa dolore enim est voluptatibus unde necessitatibus explicabo hic! Sed iste non alias maiores error asperiores expedita, earum deleniti suscipit dolor a accusantium. Temporibus aliquid animi saepe labore.</p>
+      </div>
+    </section>
+    <section id="contactUs">
+
     </section>
     <script src="../js/homePage.js"></script>
   </body>

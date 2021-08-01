@@ -26,6 +26,7 @@ ul {
 
 li > a:hover {
   color: #adadad;
+  border-bottom: 1px solid #adadad;
 }
 
 header {
@@ -37,10 +38,10 @@ header {
 }
 
 .logo {
-  margin-left: 1rem;
+  margin-left: 3rem;
 }
 
 .line {
   width: 100%;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.171);
 }
