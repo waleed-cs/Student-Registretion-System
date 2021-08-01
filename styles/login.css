@@ -5,7 +5,11 @@
 }
 
 body {
-  height: 100vh;
+  overflow: hidden;
+}
+
+Main {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +30,7 @@ body {
 
 .form_parent {
   background-color: #334155;
-  min-height: 50vh;
+  min-height: max-content;
   width: 310px;
   display: flex;
   justify-content: stretch;
@@ -77,4 +81,40 @@ button:hover {
   border-radius: 15px;
   text-align: center;
   display: none;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 100%;
+  height: 100vh;
+  justify-items: center;
+}
+
+.login_section {
+  display: flex;
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#logo {
+  color: #334155;
+  margin: auto;
+}
+
+nav > ul > li > a {
+  display: none;
+}
+
+header {
+  margin: auto;
 }

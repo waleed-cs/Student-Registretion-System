@@ -20,16 +20,10 @@
     <title>HomePage</title>
   </head>
   <body>
+    <?php
+    require('C:\xampp\htdocs\Task2\pages\header.html');
+    ?>
     <i class="fas fa-chevron-up" onclick="scrollToTop()"></i>
-    <header>
-      <a href="./homePage.html">Logo</a>
-      <nav>
-        <ul>
-          <li><a href="">About us</a></li>
-          <li><a href="./login.php">Login</a></li>
-        </ul>
-      </nav>
-    </header>
     <main>
       <div class="text_parent">
         <div class="text">
@@ -185,7 +179,9 @@
         </svg>
       </div>
     </main>
-    <div class="aboutUs"></div>
+    <section id="aboutUS">
+      
+    </section>
     <script src="../js/homePage.js"></script>
   </body>
 </html>

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
 
 main {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 50% 50%;
   margin-top: 5%;
@@ -62,9 +63,6 @@ header {
   height: 4rem;
   width: 90%;
 }
-.aboutUs {
-  height: 100vh;
-}
 
 .fa-chevron-up {
   position: fixed;
@@ -79,4 +77,9 @@ header {
 
 .fa-chevron-up.show {
   right: 10px;
+}
+
+#aboutUS {
+  height: 100vh;
+  background-color: rgb(9, 69, 88);
 }
