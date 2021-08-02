@@ -11,22 +11,42 @@ session_start();
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/adminDashboard.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Student Registration System</title>
   </head>
   <body>
-  <i class="fas fa-sign-out-alt" onClick="document.location.href='http://localhost/Task2/pages/login.php'" ></i>
-    <?php
-    echo "welcome {$_SESSION['name']}";
-    ?>
+    <header>
+      <div class="person">
+      <i class="fas fa-user"></i>
+      <p><?php echo "welcome {$_SESSION['name']}";?> </p>
+      </div>
+      <div class="menu">
+        <div class="option option1">
+        <i class="fas fa-user-plus"></i>
+        <p>Register Student</p>
+        </div>
+        <div class="option option2">
+        <i class="fas fa-user-plus"></i>
+        <p>View Students</p>
+        </div>
+      </div>
+      <div class="logout" onClick="document.location.href='http://localhost/Task2/pages/login.php'" >
+        <div>
+        <i class="fas fa-sign-out-alt"></i>
+        <p>Logout</p>
+        </div>
+      </div>
+    </header>
+
+
     <section class="form_parent">
       <div class="form_div">
         <h3>Student Registration System</h3>
         <form
           method="post"
-          action="insertStudent.php"
+          action="registerStudent.php"
           autocomplete="off"
         >
           <div class="form">
@@ -40,7 +60,7 @@ session_start();
             </div>
             <div class="form_input">
               <label for="nid">national id</label>
-              <input type="text" id="nid" name="nid" required />
+              <input type="text" id="nid" name="nid"  maxlength = "10" required />
             </div>
             <div class="form_input">
               <label for="dob">date of brith</label>
@@ -63,5 +83,6 @@ session_start();
         </form>
       </div>
     </section>
+    <script src="../js/adminDashboard.js"></script>
   </body>
 </html>

@@ -46,7 +46,7 @@ form {
 }
 
 form > button {
-  width: max-content;
+  width: min-content;
   padding: 0.75rem 2rem;
   margin: 1rem auto;
   background-color: transparent;
@@ -71,15 +71,16 @@ button:hover {
   outline: none;
   border: none;
   border-radius: 16px;
-  padding: 0.2rem;
+  width: 110%;
+  padding: 0.4rem;
 }
 
 .error_message {
-  background-color: black;
   padding: 0.75rem;
   margin-bottom: 0.5rem;
   border-radius: 15px;
   text-align: center;
+  color: red;
   display: none;
 }
 
@@ -117,4 +118,19 @@ nav > ul > li > a {
 
 header {
   margin: auto;
+}
+
+.forget {
+  color: white;
+  margin: 1rem auto;
+}
+
+.line {
+  width: 100%;
+  border-bottom: 5px solid rgb(255, 255, 255);
+  margin: 1rem 0;
+}
+
+.forget_container {
+  margin-bottom: 1rem;
 }

@@ -12,7 +12,7 @@ if(isset($_POST)){
         $type = mysqli_fetch_array($result, MYSQLI_NUM);
         $_SESSION['name'] = $type[0];
         if($type[2] == 1){
-            header('Location:http://localhost/Task2/pages/index.php');
+            header('Location:http://localhost/Task2/pages/adminDashboard.php');
             exit();
         }else{
             header('Location:http://localhost/Task2/pages/studentEnroll.php');

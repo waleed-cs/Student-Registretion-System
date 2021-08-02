@@ -192,7 +192,50 @@
       </div>
     </section>
     <section id="contactUs">
-
+      <div class="cards">
+        <div class="card1">
+        <div class="info">
+        <i class="fas fa-user"></i>
+        <p class="name">Waleed Alharthi</p>
+        </div>
+        <div class="info">
+        <i class="fas fa-envelope"></i>
+        <p class="name">waleedmh.cs@gmail.com</p>
+        </div>
+        <div class="info">
+        <i class="fas fa-phone-square-alt"></i>
+        <p class="name">+966536847851</p>
+        </div>
+        </div>
+        <div class="card1">
+        <div class="info">
+        <i class="fas fa-user"></i>
+        <p class="name">Waleed Alharthi</p>
+        </div>
+        <div class="info">
+        <i class="fas fa-envelope"></i>
+        <p class="name">waleedmh.cs@gmail.com</p>
+        </div>
+        <div class="info">
+        <i class="fas fa-phone-square-alt"></i>
+        <p class="name">+966536847851</p>
+        </div>
+        </div>
+        <div class="card1">
+        <div class="info">
+        <i class="fas fa-user"></i>
+        <p class="name">Waleed Alharthi</p>
+        </div>
+        <div class="info">
+        <i class="fas fa-envelope"></i>
+        <p class="name">waleedmh.cs@gmail.com</p>
+        </div>
+        <div class="info">
+        <i class="fas fa-phone-square-alt"></i>
+        <p class="name">+966536847851</p>
+        </div>
+        </div>
+      </div>
     </section>
     <script src="../js/homePage.js"></script>
   </body>

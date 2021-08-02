@@ -10,12 +10,12 @@ body {
   align-items: center;
   font-family: "Roboto", sans-serif;
   background-color: #334155;
+  color: white;
 }
 .form_parent {
   width: 100%;
   display: flex;
   justify-content: center;
-  color: #e2e8f0;
 }
 
 .form_parent > .form_div {
@@ -54,8 +54,8 @@ select {
   padding: 4px;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #e2e8f0;
-  color: #e2e8f0;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
   outline: none;
 }
 
@@ -92,9 +92,94 @@ option {
   cursor: pointer;
 }
 
-.fa-sign-out-alt {
+.logout {
   position: absolute;
-  top: 0;
-  right: 5%;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
   cursor: pointer;
+}
+
+.logout > div {
+  display: flex;
+}
+
+.logout > div > i {
+  cursor: pointer;
+}
+.logout > div > p {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background-color: #fff;
+}
+
+.logout:hover > div > p {
+  color: #334155;
+}
+
+.logout:hover > div > i {
+  color: #334155;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 20vw;
+  background-color: #2c3849;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.person {
+  padding: 2rem;
+  display: flex;
+}
+
+.person > p {
+  margin-left: 0.5rem;
+}
+
+.option {
+  display: flex;
+  padding: 2rem;
+}
+
+.option > p {
+  margin-left: 0.5rem;
+}
+
+.option:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.option:hover > p {
+  background-color: white;
+  color: #334155;
+}
+
+.option:hover > i {
+  background-color: white;
+  color: #334155;
+}
+
+.option1 {
+  background-color: #ffffff;
+}
+
+.option1 > .fa-user-plus {
+  color: #334155;
+}
+.option1 > p {
+  color: #334155;
 }
