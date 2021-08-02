@@ -2,6 +2,11 @@
 
 session_start();
 
+require('./dbconnaction.php');
+
+$query = "SELECT * FROM student ORDER BY fname ASC;";
+$result = mysqli_query($conn,$query);
+
 
 ?>
 
@@ -28,7 +33,7 @@ session_start();
         <p>Register Student</p>
         </div>
         <div class="option option2">
-        <i class="fas fa-user-plus"></i>
+        <i class="fas fa-eye"></i>
         <p>View Students</p>
         </div>
       </div>
@@ -39,8 +44,7 @@ session_start();
         </div>
       </div>
     </header>
-
-
+    <Main>
     <section class="form_parent">
       <div class="form_div">
         <h3>Student Registration System</h3>
@@ -83,6 +87,29 @@ session_start();
         </form>
       </div>
     </section>
+    <section class="student_table_parent"  style="display:none">
+      <table>
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>National ID</th>
+          <th>Date Of Brith</th>
+          <th>Email</th>
+          <th>Gender</th>
+        </tr>
+        <tr>
+        <?php while($student = mysqli_fetch_array($result)){
+          echo "<tr> <td>$student[0]</td>";
+          echo "<td>$student[1]</td>";
+          echo "<td>$student[2]</td>";
+          echo "<td>$student[3]</td>";
+          echo "<td>$student[4]</td>";
+          echo "<td>$student[5]</td> </tr>";
+        }  ?>
+        </tr>
+      </table>
+    </section>
+    </Main>
     <script src="../js/adminDashboard.js"></script>
   </body>
 </html>

@@ -6,12 +6,20 @@
 body {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-family: "Roboto", sans-serif;
   background-color: #334155;
   color: white;
 }
+
+Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .form_parent {
   width: 100%;
   display: flex;
@@ -65,21 +73,20 @@ select {
 }
 
 button {
-  margin-top: 1rem;
-  padding: 1rem 3rem;
-  border: 3px solid #f8e7cd;
-  cursor: pointer;
+  width: min-content;
+  padding: 0.75rem 2rem;
+  margin: 1rem auto;
   background-color: transparent;
-  color: white;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #6c63ff;
   transition: all 0.5s ease;
+  border-radius: 20px;
+  display: block;
 }
 
 button:hover {
-  background-color: #334155;
-  color: #e2e8f0;
+  background-color: #6c63ff;
 }
 
 #gender {
@@ -101,6 +108,7 @@ option {
   width: 100%;
   padding: 2rem;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 .logout > div {
@@ -132,6 +140,7 @@ header {
   height: 100vh;
   width: 20vw;
   background-color: #2c3849;
+  float: left;
 }
 
 .menu {
@@ -152,6 +161,7 @@ header {
 .option {
   display: flex;
   padding: 2rem;
+  transition: all 0.5s ease;
 }
 
 .option > p {
@@ -164,12 +174,10 @@ header {
 }
 
 .option:hover > p {
-  background-color: white;
   color: #334155;
 }
 
 .option:hover > i {
-  background-color: white;
   color: #334155;
 }
 
@@ -182,4 +190,21 @@ header {
 }
 .option1 > p {
   color: #334155;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+  border: 2px solid white;
+}
+
+td,
+th {
+  padding: 2rem;
 }
