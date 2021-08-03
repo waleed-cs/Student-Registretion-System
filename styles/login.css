@@ -29,7 +29,7 @@ Main {
 }
 
 .form_parent {
-  background-color: #334155;
+  background-color: #16425b;
   min-height: max-content;
   width: 310px;
   display: flex;
@@ -37,6 +37,29 @@ Main {
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
+  animation: 1s ease-in-out 0s 1 slideFromLeft;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.image_section {
+  animation: 1s ease-in-out 0s 1 slideFromRight;
 }
 
 form {
@@ -50,7 +73,7 @@ form > button {
   padding: 0.75rem 2rem;
   margin: 1rem auto;
   background-color: transparent;
-  color: #fff;
+  color: #d9dcd6;
   cursor: pointer;
   border: 1px solid #6c63ff;
   transition: all 0.5s ease;
@@ -59,6 +82,7 @@ form > button {
 
 button:hover {
   background-color: #6c63ff;
+  color: #fff;
 }
 
 .form_parent > h1 {
@@ -67,7 +91,7 @@ button:hover {
 
 .form_input > input {
   background-color: #2b3747;
-  color: #fff;
+  color: #d9dcd6;
   outline: none;
   border: none;
   border-radius: 16px;
@@ -108,7 +132,7 @@ img {
 }
 
 #logo {
-  color: #334155;
+  color: #16425b;
   margin: auto;
 }
 

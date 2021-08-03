@@ -7,14 +7,14 @@
 
 header > a {
   text-decoration: none;
-  color: #fff;
+  color: #d9dcd6;
   font-weight: bold;
   background-color: transparent;
 }
 
 li > a {
   text-decoration: none;
-  color: #fff;
+  color: #d9dcd6;
   margin-left: 1rem;
   transition: all 0.5s ease;
 }
@@ -25,8 +25,8 @@ ul {
 }
 
 li > a:hover {
-  color: #adadad;
-  border-bottom: 1px solid #adadad;
+  color: #9b9a9a;
+  border-bottom: 1px solid #9b9a9a;
 }
 
 header {

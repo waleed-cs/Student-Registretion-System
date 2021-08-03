@@ -5,26 +5,27 @@ const registerForm = document.querySelector(".form_parent");
 const studentTable = document.querySelector(".student_table_parent");
 const resetAllButtons = () => {
   buttons.forEach((button) => {
-    button.children[0].style.color = "white";
-    button.children[1].style.color = "white";
-    button.style.backgroundColor = "#2c3849";
+    console.log(button);
+    button.children[0].style.color = "#d9dcd6";
+    button.children[1].style.color = "#d9dcd6";
+    button.style.backgroundColor = "#11364b";
   });
 };
 
 studentRegister.addEventListener("click", () => {
   resetAllButtons();
-  studentRegister.style.backgroundColor = "white";
-  studentRegister.children[0].style.color = "#334155";
-  studentRegister.children[1].style.color = "#334155";
+  studentRegister.style.backgroundColor = "#d9dcd6";
+  studentRegister.children[0].style.color = "#11364b";
+  studentRegister.children[1].style.color = "#11364b";
   registerForm.style.display = "";
   studentTable.style.display = "none";
 });
 
 viewStudents.addEventListener("click", () => {
   resetAllButtons();
-  viewStudents.style.backgroundColor = "white";
-  viewStudents.children[0].style.color = "#334155";
-  viewStudents.children[1].style.color = "#334155";
+  viewStudents.style.backgroundColor = "#d9dcd6";
+  viewStudents.children[0].style.color = "#11364b";
+  viewStudents.children[1].style.color = "#11364b";
   registerForm.style.display = "none";
   studentTable.style.display = "";
 });

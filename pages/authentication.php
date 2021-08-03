@@ -15,7 +15,7 @@ if(isset($_POST)){
             header('Location:http://localhost/Task2/pages/adminDashboard.php');
             exit();
         }else{
-            header('Location:http://localhost/Task2/pages/studentEnroll.php');
+            header('Location:http://localhost/Task2/pages/studentDashboard.php');
         }
     }else{
         echo "<script> document.queryselector('.error_message').style.display = '';  </script>";

@@ -11,92 +11,11 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #16425b;
   color: #d9dcd6;
-}
-
-Main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.form_parent {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.form_parent > .form_div {
-  /* border: 2px solid #e2e8f0; */
-  background: #11364b;
-  border-radius: 5px;
-  padding: 2.4rem;
-  width: fit-content;
-}
-
-.form_div > h3 {
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-.form_input {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  height: 5rem;
-  width: 10rem;
-  margin-left: 1rem;
-}
-
-.form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  width: max-content;
-}
-
-input,
-select {
-  padding: 4px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #d9dcd6;
-  color: #d9dcd6;
-  outline: none;
-}
-
-.form_input > label {
-  margin-bottom: 0.5rem;
-  text-transform: capitalize;
-}
-
-button {
-  width: min-content;
-  padding: 0.75rem 2rem;
-  margin: 1rem auto;
-  background-color: transparent;
-  color: #d9dcd6;
-  cursor: pointer;
-  border: 1px solid #6c63ff;
-  transition: all 0.5s ease;
-  border-radius: 20px;
-  display: block;
-}
-
-button:hover {
-  background-color: #6c63ff;
-}
-
-#gender {
-  cursor: pointer;
-}
-
-option {
-  background-color: #11364b;
-  color: #e2e8f0;
-  cursor: pointer;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .logout {
@@ -186,11 +105,72 @@ header {
   background-color: #d9dcd6;
 }
 
-.option1 > .fa-user-plus {
+.option1 > i {
   color: #334155;
 }
 .option1 > p {
   color: #334155;
+}
+
+Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form_parent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form_parent > .form_div {
+  /* border: 2px solid #e2e8f0; */
+  background: #11364b;
+  border-radius: 5px;
+  padding: 2.4rem;
+  width: fit-content;
+}
+
+form > h3 {
+  text-align: center;
+}
+
+button {
+  width: min-content;
+  padding: 0.75rem 2rem;
+  margin: 1rem auto;
+  background-color: transparent;
+  color: #d9dcd6;
+  cursor: pointer;
+  border: 1px solid #6c63ff;
+  transition: all 0.5s ease;
+  border-radius: 20px;
+  display: block;
+}
+
+button:hover {
+  background-color: #6c63ff;
+}
+
+form {
+  padding: 2rem;
+}
+
+form > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form > div > input,
+label {
+  cursor: pointer;
+}
+
+form > div > h4 {
+  margin-left: 0.5rem;
 }
 
 table {
@@ -206,5 +186,9 @@ th {
 
 td,
 th {
-  padding: 2rem;
+  padding: 1rem;
+}
+
+input {
+  cursor: pointer;
 }

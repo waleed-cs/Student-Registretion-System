@@ -6,8 +6,8 @@
 }
 
 body {
-  background-color: #334155;
-  color: #fff;
+  background-color: #16425b;
+  color: #d9dcd6;
   font-family: "Roboto", sans-serif;
 }
 
@@ -36,13 +36,13 @@ main {
 
 header > a {
   text-decoration: none;
-  color: #fff;
+  color: #d9dcd6;
   font-weight: bold;
 }
 
 li > a {
   text-decoration: none;
-  color: #fff;
+  color: #d9dcd6;
   margin-left: 1rem;
   transition: all 0.5s ease;
 }
