@@ -133,7 +133,7 @@ Main {
   width: fit-content;
 }
 
-form > h3 {
+.form_div > h3 {
   text-align: center;
 }
 

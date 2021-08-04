@@ -4,22 +4,18 @@ session_start();
 
 require('./dbconnaction.php');
 
-$query = "SELECT * FROM course ORDER BY course_id ASC;";
+$query = "SELECT * FROM course ORDER BY course_id ASC";
 $result = mysqli_query($conn,$query);
 
-echo"";
+$test = $_SESSION['name'];
 
-$query2 = "SELECT fname,lname FROM student WHERE email = {$_SESSION['name']} ;";
-$result2 = mysqli_query($conn,$query2);
-$row = mysqli_fetch_row($result2);
-$fname = $row[0];
-echo $fname;
-// while($name = mysqli_fetch_array($result2)){
-//     echo "$name[0]";
-// }
 
-echo "{$result2}";
-
+ $query2 = "SELECT fname,lname,national_id FROM student WHERE email = '$test' ";
+ $result2 = mysqli_query($conn,$query2);
+ $row = mysqli_fetch_array($result2, MYSQLI_NUM);
+ $fname = $row[0];
+ $lname = $row[1]; 
+ $_SESSION['nid'] = $row[2];
 ?>
 
 <!DOCTYPE html>
@@ -37,16 +33,20 @@ echo "{$result2}";
     <header>
       <div class="person">
       <i class="fas fa-user"></i>
-      <p><?php echo "welcome {$_SESSION['name']}";?> </p>
+      <p><?php echo "{$fname} {$lname}";?> </p>
       </div>
       <div class="menu">
         <div class="option option1">
         <i class="fas fa-eye"></i>
-        <p>View Courses</p>
+        <p>Enroll Courses</p>
         </div>
         <div class="option option2">
         <i class="fas fa-eye"></i>
-        <p>View Students</p>
+        <p>View Courses</p>
+        </div>
+        <div class="option option3">
+        <i class="fas fa-cog"></i>
+        <p>Settings</p>
         </div>
       </div>
       <div class="logout" onClick="document.location.href='http://localhost/Task2/pages/login.php'" >
@@ -59,7 +59,7 @@ echo "{$result2}";
     <Main>
     <section class="form_parent">
       <div class="form_div">
-        <h3>Student Registration System</h3>
+        <h3>Courses Registration</h3>
         <form action="enrollClasses.php" method="post">
         <table>
         <tr>
