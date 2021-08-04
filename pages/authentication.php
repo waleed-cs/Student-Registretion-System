@@ -1,7 +1,7 @@
 <?php
 session_start();
- require('./dbconnaction.php');
-
+require('./dbconnaction.php');
+$error = "The username or password you provided is incorrect. Please try again.";
 if(isset($_POST)){
     $user = $_POST['userr'];
     $pass = $_POST['pwd'];
@@ -18,11 +18,12 @@ if(isset($_POST)){
             header('Location:http://localhost/Task2/pages/studentDashboard.php');
         }
     }else{
-        echo "<script> document.queryselector('.error_message').style.display = '';  </script>";
+        $_SESSION['Message'] = $error;
         header('Location:http://localhost/Task2/pages/login.php');
     }
-}else{
-    echo 'error';
+
+} else{
+    echo "error";
 }
 
 ?>

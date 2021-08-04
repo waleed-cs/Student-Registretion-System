@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,15 +26,23 @@
         <form method="POST" action = "./authentication.php" autocomplete="off" >
             <div class="form_input">
                 <label for="username">Username</label>
-                <input type="text" name="userr" id="username">
+                <input type="text" name="userr" id="username" required>
             </div>
             <div class="form_input">
                 <label for="password">password</label>
-                <input type="password" name="pwd" id="password">
+                <input type="password" name="pwd" id="password" required>
             </div>
            <button type="submit">Login</button>
         </form>
-        <div><p class="error_message">The username or password you provided is incorrect. Please try again.</p></div>
+        <div><p class="error_message">
+        <?php
+        if (isset($_SESSION['Message']))
+        {
+            echo $_SESSION['Message'];
+        }
+        ?>
+        </p>
+    </div>
         <div class="line"></div>
         <div class="forget_container"><a class="forget" href="./forgetPassword.php">Forget Password?</a></div>
     </div>
@@ -37,5 +52,10 @@
     </div>
     </section>
 </Main>
+<script src="../js/login.js"></script>
 </body>
 </html>
+
+<?php
+    unset($_SESSION["Message"]);
+?>
