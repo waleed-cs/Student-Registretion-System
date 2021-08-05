@@ -37,7 +37,7 @@ $result = mysqli_query($conn,$query);
         <p>View Students</p>
         </div>
       </div>
-      <div class="logout" onClick="document.location.href='http://localhost/Task2/pages/login.php'" >
+      <div class="logout" onClick="document.location.href='http://localhost/Task2/pages/login.php'; document.querySelector('#login-animate').classList.add('login-animate'); document.querySelector('#login-animate').classList.add('image-animate'); " >
         <div>
         <i class="fas fa-sign-out-alt"></i>
         <p>Logout</p>
@@ -52,6 +52,7 @@ $result = mysqli_query($conn,$query);
           method="post"
           action="registerStudent.php"
           autocomplete="off"
+          onSubmit="alert('Thank you!');"
         >
           <div class="form">
             <div class="form_input">

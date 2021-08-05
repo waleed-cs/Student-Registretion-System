@@ -15,13 +15,14 @@ session_start();
     <title>Login</title>
 </head>
 <body>
-    <?php
-    require('C:\xampp\htdocs\Task2\pages\header.html');
-    ?>
+
 <Main>
 <section>
         <div class="login_section">
-        <div class="form_parent">
+        <?php
+        require('C:\xampp\htdocs\Task2\pages\header.html');
+        ?>
+        <div class="form_parent  login-animate" id="login-animate">
         <h1>Login</h1>
         <form method="POST" action = "./authentication.php" autocomplete="off" >
             <div class="form_input">
@@ -37,7 +38,11 @@ session_start();
         <div><p class="error_message">
         <?php
         if (isset($_SESSION['Message']))
-        {
+        {?>
+                <script>
+                document.querySelector('#login-animate').classList.remove('login-animate');
+                </script>
+            <?php
             echo $_SESSION['Message'];
         }
         ?>
@@ -47,12 +52,20 @@ session_start();
         <div class="forget_container"><a class="forget" href="./forgetPassword.php">Forget Password?</a></div>
     </div>
         </div>
-    <div class="image_section">
+    <div class="image_section image-animate" id="image-animate">
+    <?php
+        if (isset($_SESSION['Message']))
+        {?>
+                <script>
+                document.querySelector('#image-animate').classList.remove('image-animate');
+                </script>
+        <?php
+        }
+        ?>
         <img src="../img/students.jpg" alt="students">
     </div>
     </section>
 </Main>
-<script src="../js/login.js"></script>
 </body>
 </html>
 

@@ -37,7 +37,6 @@ Main {
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
-  animation: 1s ease-in-out 0s 1 slideFromLeft;
 }
 
 @keyframes slideFromLeft {
@@ -58,7 +57,11 @@ Main {
   }
 }
 
-.image_section {
+.login-animate {
+  animation: 1s ease-in-out 0s 1 slideFromLeft;
+}
+
+.image-animate {
   animation: 1s ease-in-out 0s 1 slideFromRight;
 }
 
@@ -117,6 +120,7 @@ section {
 
 .login_section {
   display: flex;
+  flex-direction: column;
   background-color: white;
   height: 100vh;
   width: 100%;
@@ -140,7 +144,7 @@ nav > ul > li > a {
 }
 
 header {
-  margin: auto;
+  margin: 0;
 }
 
 .forget {
