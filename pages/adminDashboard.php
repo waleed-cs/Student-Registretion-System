@@ -2,6 +2,9 @@
 
 session_start();
 
+if(!isset($_SESSION['name'])){
+  header('Location:http://localhost/Task2/pages/login.php');
+}
 require('./dbconnaction.php');
 
 $query = "SELECT * FROM student ORDER BY fname ASC;";
@@ -37,7 +40,7 @@ $result = mysqli_query($conn,$query);
         <p>View Students</p>
         </div>
       </div>
-      <div class="logout" onClick="document.location.href='http://localhost/Task2/pages/login.php'; document.querySelector('#login-animate').classList.add('login-animate'); document.querySelector('#login-animate').classList.add('image-animate'); " >
+      <div class="logout" onClick="document.location.href='http://localhost/Task2/pages/login.php'; document.querySelector('#login-animate').classList.add('login-animate'); document.querySelector('#login-animate').classList.add('image-animate'); <?php session_destroy(); ?> " >
         <div>
         <i class="fas fa-sign-out-alt"></i>
         <p>Logout</p>
