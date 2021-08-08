@@ -1,9 +1,8 @@
 <?php
 
-
 session_start();
 require('./dbconnaction.php');
-if(isset($_POST)){
+if(isset($_POST['course'])){
     //submitted courses
     $courses = $_POST['course'];
     $nid = $_SESSION['nid'];
@@ -20,13 +19,29 @@ if(isset($_POST)){
         array_push($data,$row['course__name']) ;        
     }
 
+}else{
+    $_SESSION['Message'] = "Please pick a course";
+    header('Location:http://localhost/Task2/pages/studentDashboard.php');
 }  
-        if ($courses == $data){
-            echo "Both arrays are same\n";
+    if(isset($courses)){
+        if (count(array_intersect($courses,$data)) == 0){
+            $courses = array_diff($courses,$data);
+            foreach($courses as $co){
+                $query_insert = "INSERT INTO take (course__name , student_id) VALUES('$co','$nid')";
+                $result = mysqli_query($conn, $query_insert);
+            }
+            if(isset($result)){
+                $_SESSION['success'] = "The courses have enrolled successfully";
+                header('Location:http://localhost/Task2/pages/studentDashboard.php');
+            }else{
+             echo 'courses not enrolled';
+            }
             exit();
         }else{
-             echo "Both arrays are not same\n";
-         }
+            $_SESSION['Message'] = "Please pick the courses that never been picked";
+            header('Location:http://localhost/Task2/pages/studentDashboard.php');
+        }
+    }
 //     if(isset($courses)){
 //          foreach($courses as $co){
 //              $query_insert = "INSERT INTO take (course__name , student_id) VALUES('$co','$nid')";

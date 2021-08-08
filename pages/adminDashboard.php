@@ -10,6 +10,11 @@ require('./dbconnaction.php');
 $query = "SELECT * FROM student ORDER BY fname ASC;";
 $result = mysqli_query($conn,$query);
 
+// if(isset($_SESSION['success'])){
+//   echo "<script> console.log('there is session') </script>";
+// }else{
+//   echo "<script> console.log('no session') </script>";
+// }
 
 ?>
 
@@ -40,14 +45,30 @@ $result = mysqli_query($conn,$query);
         <p>View Students</p>
         </div>
       </div>
-      <div class="logout" onClick="document.location.href='http://localhost/Task2/pages/login.php'; document.querySelector('#login-animate').classList.add('login-animate'); document.querySelector('#login-animate').classList.add('image-animate'); <?php session_destroy(); ?> " >
+      <a class="logout" href="./login.php">
         <div>
         <i class="fas fa-sign-out-alt"></i>
         <p>Logout</p>
         </div>
-      </div>
+      </a>
     </header>
     <Main>
+      <h3 style="color:red; display:inline-block;" class="message"><?php 
+        if(isset($_SESSION['Message'])){
+          echo $_SESSION['Message'];
+        }
+        ?>
+      </h3>
+      <h3 style="color:rgb(24, 189, 24); display:inline-block;" class="message"><?php 
+        // echo "<script> console.log('$_GET['true']') </script>";
+        if(isset($_SESSION['success2'])){
+          $testing = $_SESSION['success2'];
+          echo $testing;
+        }else{
+          echo "ef";
+        }
+        ?>
+      </h3>
     <section class="form_parent">
       <div class="form_div">
         <h3>Student Registration System</h3>
@@ -55,7 +76,6 @@ $result = mysqli_query($conn,$query);
           method="post"
           action="registerStudent.php"
           autocomplete="off"
-          onSubmit="alert('Thank you!');"
         >
           <div class="form">
             <div class="form_input">
@@ -117,3 +137,8 @@ $result = mysqli_query($conn,$query);
     <script src="../js/adminDashboard.js"></script>
   </body>
 </html>
+
+<?php
+    unset($_SESSION["Message"]);
+    unset($_SESSION["success2"]);
+?>

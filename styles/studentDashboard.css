@@ -28,6 +28,8 @@ body {
   padding: 2rem;
   cursor: pointer;
   transition: all 0.5s ease;
+  text-decoration: none;
+  color: #d9dcd6;
 }
 
 .logout > div {
@@ -117,12 +119,14 @@ Main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-direction: column;
 }
 
 .form_parent {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .form_parent > .form_div {
@@ -191,4 +195,26 @@ th {
 
 input {
   cursor: pointer;
+}
+
+.courses_parent {
+  background-color: #11364b;
+  min-height: 1rem;
+  min-width: 15rem;
+  border: 3px solid #d9dcd6;
+}
+.courses_parent > h3 {
+  padding: 1rem;
+}
+.course {
+  padding: 1rem;
+}
+
+.line {
+  width: 100%;
+  border-bottom: 3px solid #d9dcd6;
+}
+
+.line:last-child {
+  display: none;
 }

@@ -16,6 +16,7 @@ if(isset($_POST)){
             exit();
         }else{
             header('Location:http://localhost/Task2/pages/studentDashboard.php');
+            exit();
         }
     }else{
         $_SESSION['Message'] = $error;
