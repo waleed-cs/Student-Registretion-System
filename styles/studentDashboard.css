@@ -168,8 +168,7 @@ form > div {
   justify-content: center;
 }
 
-form > div > input,
-label {
+form > div > input {
   cursor: pointer;
 }
 
@@ -193,7 +192,7 @@ th {
   padding: 1rem;
 }
 
-input {
+input[type="checkbox"] {
   cursor: pointer;
 }
 
@@ -217,4 +216,84 @@ input {
 
 .line:last-child {
   display: none;
+}
+
+.settings {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.settings > .form_div {
+  background: #11364b;
+  border-radius: 5px;
+  padding: 2.4rem;
+  width: max-content;
+}
+
+.form_div > h3 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.form_input {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  width: 10.5rem;
+  margin-left: 1rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  width: max-content;
+}
+
+input,
+select {
+  padding: 4px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #d9dcd6;
+  color: #d9dcd6;
+  outline: none;
+}
+
+.form_input > label {
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+button {
+  width: min-content;
+  padding: 0.75rem 2rem;
+  margin: 1rem auto;
+  background-color: transparent;
+  color: #d9dcd6;
+  cursor: pointer;
+  border: 1px solid #6c63ff;
+  transition: all 0.5s ease;
+  border-radius: 20px;
+  display: block;
+}
+
+button:hover {
+  background-color: #6c63ff;
+}
+
+#gender {
+  cursor: pointer;
+}
+
+option {
+  background-color: #11364b;
+  color: #e2e8f0;
+  cursor: pointer;
 }

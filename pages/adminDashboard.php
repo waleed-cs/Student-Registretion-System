@@ -10,12 +10,6 @@ require('./dbconnaction.php');
 $query = "SELECT * FROM student ORDER BY fname ASC;";
 $result = mysqli_query($conn,$query);
 
-// if(isset($_SESSION['success'])){
-//   echo "<script> console.log('there is session') </script>";
-// }else{
-//   echo "<script> console.log('no session') </script>";
-// }
-
 ?>
 
 <!DOCTYPE html>
@@ -64,8 +58,6 @@ $result = mysqli_query($conn,$query);
         if(isset($_SESSION['success2'])){
           $testing = $_SESSION['success2'];
           echo $testing;
-        }else{
-          echo "ef";
         }
         ?>
       </h3>

@@ -3,12 +3,16 @@ const studentRegister = document.querySelector(".option1");
 const viewStudents = document.querySelector(".option2");
 const registerForm = document.querySelector(".form_parent");
 const studentTable = document.querySelector(".student_table_parent");
+const messages = document.querySelectorAll(".message");
+
 const resetAllButtons = () => {
   buttons.forEach((button) => {
-    console.log(button);
     button.children[0].style.color = "#d9dcd6";
     button.children[1].style.color = "#d9dcd6";
     button.style.backgroundColor = "#11364b";
+    messages.forEach((message) => {
+      message.style.display = "none";
+    });
   });
 };
 

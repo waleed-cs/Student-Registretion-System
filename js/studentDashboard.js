@@ -1,6 +1,8 @@
 const options = document.querySelectorAll(".option");
 const messages = document.querySelectorAll(".message");
 const coursesDiv = document.querySelector(".courses_parent");
+const settingsButton = document.querySelector(".option3");
+const settingsDiv = document.querySelector(".settings");
 options.forEach((option) => {
   option.addEventListener("click", () => {
     messages.forEach((message) => {
@@ -23,21 +25,39 @@ const activeButton = (e) => {
   e.children[1].style.color = "#11364b";
 };
 
-const enrollCourse = document.querySelector(".option1");
+const enrollCourseButton = document.querySelector(".option1");
 const formParent = document.querySelector(".form_parent");
 
-enrollCourse.addEventListener("click", () => {
+enrollCourseButton.addEventListener("click", () => {
   resetAllButtons();
-  activeButton(enrollCourse);
+  activeButton(enrollCourseButton);
   coursesDiv.style.display = "none";
   formParent.style.display = "";
+  settingsDiv.style.display = "none";
 });
 
-const viewCourse = document.querySelector(".option2");
+const viewCourseButton = document.querySelector(".option2");
 
-viewCourse.addEventListener("click", () => {
+viewCourseButton.addEventListener("click", () => {
   resetAllButtons();
-  activeButton(viewCourse);
+  activeButton(viewCourseButton);
   formParent.style.display = "none";
   coursesDiv.style.display = "";
+  settingsDiv.style.display = "none";
 });
+
+settingsButton.addEventListener("click", () => {
+  resetAllButtons();
+  activeButton(settingsButton);
+  formParent.style.display = "none";
+  coursesDiv.style.display = "none";
+  settingsDiv.style.display = "";
+});
+
+let goToSettings = () => {
+  resetAllButtons();
+  activeButton(settingsButton);
+  formParent.style.display = "none";
+  coursesDiv.style.display = "none";
+  settingsDiv.style.display = "";
+};
