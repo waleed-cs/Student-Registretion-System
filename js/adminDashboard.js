@@ -18,7 +18,7 @@ const resetAllButtons = () => {
 
 studentRegister.addEventListener("click", () => {
   resetAllButtons();
-  studentRegister.style.backgroundColor = "#d9dcd6";
+  studentRegister.style.backgroundColor = "#F6F6F6";
   studentRegister.children[0].style.color = "#11364b";
   studentRegister.children[1].style.color = "#11364b";
   registerForm.style.display = "";
@@ -27,7 +27,7 @@ studentRegister.addEventListener("click", () => {
 
 viewStudents.addEventListener("click", () => {
   resetAllButtons();
-  viewStudents.style.backgroundColor = "#d9dcd6";
+  viewStudents.style.backgroundColor = "#F6F6F6";
   viewStudents.children[0].style.color = "#11364b";
   viewStudents.children[1].style.color = "#11364b";
   registerForm.style.display = "none";

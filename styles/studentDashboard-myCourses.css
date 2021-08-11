@@ -103,14 +103,14 @@ header {
   color: #334155 !important;
 }
 
-.option1 {
+.option2 {
   background-color: #d9dcd6;
 }
 
-.option1 > i {
+.option2 > i {
   color: #334155;
 }
-.option1 > p {
+.option2 > p {
   color: #334155;
 }
 

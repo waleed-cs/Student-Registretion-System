@@ -33,7 +33,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/studentDashboard.css" />
+    <link rel="stylesheet" href="../styles/studentDashboard-myCourses.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Student Dashboard</title>
@@ -49,7 +49,7 @@
         <i class="fas fa-plus"></i>
         <p>Enroll Courses</p>
         </a>
-        <a class="option option2" href="./studentDashboard-myCourses.php">
+        <a class="option option2" href="">
         <i class="fas fa-eye"></i>
         <p>View Courses</p>
         </a>
@@ -84,30 +84,8 @@
         }
         ?>
       </h3>
-    <section class="form_parent" >
-      <div class="form_div">
-        <h3>Courses Registration</h3>
-      <form action="./enrollClasses.php" method="post">
-        <table>
-        <tr>
-          <th>Course ID</th>
-          <th>Course Name</th>
-          <th>Course Hours</th>
-        </tr>
 
-        <?php while($course = mysqli_fetch_array($result)){
-          echo "<tr> <td>$course[0]</td>";
-          echo "<td>$course[1]</td>";
-          echo "<td>$course[2]</td>";
-          echo "<td><input type='checkbox' name ='course[]' id = '$course[0]' value = '$course[1]'></td> </tr>";
-        }  ?>
-
-        </table>
-        <button type="submit">Enroll</button>
-      </form>
-      </div>
-    </section>
-    <section class="courses_parent" style="display:none;">
+    <section class="courses_parent">
       <h3 class="course_title">My Courses</h3>
       <div class="line"></div>
       <div class="courses">
@@ -128,57 +106,6 @@
           }
 
           ?>
-      </div>
-    </section>
-    <section class="settings" style="display:none;">
-
-    <div class="form_div">
-        <h3>Edit Profile</h3>
-        <form
-          method="post"
-          action="updateInfo.php"
-          autocomplete="off"
-        >
-          <div class="form">
-            <div class="form_input">
-              <label for="fname">first name</label>
-              <input type="text" id="fname" name="fname" value="<?php echo $fname;  ?>" required/>
-            </div>
-            <div class="form_input">
-              <label for="lname">last name</label>
-              <input type="text" id="lname" name="lname" value="<?php echo $lname;  ?>"/>
-            </div>
-            <div class="form_input">
-              <label for="nid">national id</label>
-              <input type="text" id="nid" name="nid"  maxlength = "10" value="<?php echo $nid;  ?>" />
-            </div>
-            <div class="form_input">
-              <label for="dob">date of brith</label>
-              <input type="date" id="dob" name="dob" value="<?php echo $row[3];  ?>"/>
-            </div>
-            <div class="form_input email">
-              <label for="email">email</label>
-              <input type="email" id="email" name="email" value="<?php echo $row[4];  ?>"/>
-            </div>
-            <div class="form_input">
-              <label>gender</label>
-              <select name="gender" id="gender">
-                <option value="<?php echo $row[5];?>" selected hidden><?php echo $row[5];?></option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </div>
-            <div class="form_input">
-              <label for="nid">New Password</label>
-              <input type="text" id="nid" name="password"/>
-            </div>
-            <div class="form_input">
-              <label for="nid">Confirm New Password</label>
-              <input type="text" id="nid" name="password2"/>
-            </div>
-          </div>
-          <button type="submit">Update</button>
-        </form>
       </div>
     </section>
     </Main>

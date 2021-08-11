@@ -24,19 +24,13 @@ Main {
   margin-bottom: 1rem;
 }
 
-.form_input > label {
-  margin-bottom: 0.4rem;
-}
-
 .form_parent {
-  background-color: #16425b;
   min-height: max-content;
   width: 310px;
   display: flex;
   justify-content: stretch;
   align-items: center;
   flex-direction: column;
-  border-radius: 15px;
 }
 
 @keyframes slideFromLeft {
@@ -72,34 +66,32 @@ form {
 }
 
 form > button {
-  width: min-content;
-  padding: 0.75rem 2rem;
+  width: 25vw;
+  padding: 0.65rem;
   margin: 1rem auto;
-  background-color: transparent;
-  color: #d9dcd6;
+  background-color: #6c63ff;
+  color: #fff;
   cursor: pointer;
-  border: 1px solid #6c63ff;
   transition: all 0.5s ease;
-  border-radius: 20px;
+  border: none;
 }
 
 button:hover {
-  background-color: #6c63ff;
+  background-color: #564fcc;
   color: #fff;
 }
 
-.form_parent > h1 {
-  margin-top: 2rem;
-}
-
 .form_input > input {
-  background-color: #2b3747;
-  color: #d9dcd6;
+  color: #000;
   outline: none;
   border: none;
-  border-radius: 16px;
-  width: 110%;
+  width: 25vw;
   padding: 0.4rem;
+  border-bottom: 1px solid #000;
+}
+
+.form_input > input::placeholder {
+  color: #b1b1b1;
 }
 
 .error_message {
@@ -135,8 +127,10 @@ img {
 }
 
 #logo {
-  color: #16425b;
-  margin: auto;
+  color: #909193;
+  font-weight: bolder;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 nav > ul > li > a {

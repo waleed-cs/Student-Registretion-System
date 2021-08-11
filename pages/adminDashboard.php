@@ -30,16 +30,16 @@ $result = mysqli_query($conn,$query);
       <p><?php echo "welcome {$_SESSION['name']}";?> </p>
       </div>
       <div class="menu">
-        <div class="option option1">
+        <div class="option option1" style="margin-bottom:1rem; margin-left:0.7rem;">
         <i class="fas fa-user-plus"></i>
         <p>Register Student</p>
         </div>
-        <div class="option option2">
+        <div class="option option2" style="margin-left:0.7rem;">
         <i class="fas fa-eye"></i>
         <p>View Students</p>
         </div>
       </div>
-      <a class="logout" href="./login.php">
+      <a class="logout" href="./login.php" style="margin-left:0.7rem;">
         <div>
         <i class="fas fa-sign-out-alt"></i>
         <p>Logout</p>
@@ -63,7 +63,7 @@ $result = mysqli_query($conn,$query);
       </h3>
     <section class="form_parent">
       <div class="form_div">
-        <h3>Student Registration System</h3>
+        <h3>Student Registration</h3>
         <form
           method="post"
           action="registerStudent.php"
@@ -98,8 +98,8 @@ $result = mysqli_query($conn,$query);
                 <option value="female">Female</option>
               </select>
             </div>
+            <button type="submit">Register</button>
           </div>
-          <button type="submit">Register</button>
         </form>
       </div>
     </section>

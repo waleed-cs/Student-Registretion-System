@@ -3,14 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Roboto", sans-serif;
-  background-color: #16425b;
-  color: #d9dcd6;
+  background-color: #f6f6f6;
 }
 
 Main {
@@ -25,13 +25,14 @@ Main {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .form_parent > .form_div {
-  background: #11364b;
   border-radius: 5px;
   padding: 2.4rem;
-  width: fit-content;
+  width: 100%;
+  color: #575555;
 }
 
 .form_div > h3 {
@@ -44,17 +45,15 @@ Main {
   display: flex;
   flex-direction: column;
   height: 5rem;
-  width: 10rem;
-  margin-left: 1rem;
+  width: 100%;
 }
 
 .form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-left: auto;
-  margin-right: auto;
+  grid-template-columns: 50% 50%;
   margin-top: 1rem;
-  width: max-content;
+  width: 55%;
+  column-gap: 1rem;
 }
 
 input,
@@ -62,8 +61,9 @@ select {
   padding: 4px;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #d9dcd6;
-  color: #d9dcd6;
+  border-bottom: 2px solid #575555;
+  width: 100%;
+  color: #575555;
   outline: none;
 }
 
@@ -73,20 +73,19 @@ select {
 }
 
 button {
-  width: min-content;
   padding: 0.75rem 2rem;
-  margin: 1rem auto;
-  background-color: transparent;
+  background-color: #6c63ff;
   color: #d9dcd6;
   cursor: pointer;
-  border: 1px solid #6c63ff;
+  border: none;
   transition: all 0.5s ease;
-  border-radius: 20px;
-  display: block;
+  grid-column-start: span 2;
+  width: 40%;
+  justify-self: center;
 }
 
 button:hover {
-  background-color: #6c63ff;
+  background-color: #4d46d8;
 }
 
 #gender {
@@ -111,6 +110,8 @@ option {
   transition: all 0.5s ease;
   text-decoration: none;
   color: #e2e8f0;
+  border-top-left-radius: 65px;
+  border-bottom-left-radius: 65px;
 }
 
 .logout > div {
@@ -126,7 +127,7 @@ option {
 }
 
 .logout:hover {
-  background-color: #d9dcd6;
+  background-color: #f6f6f6;
 }
 
 .logout:hover > div > p {
@@ -143,6 +144,7 @@ header {
   width: 20vw;
   background-color: #11364b;
   float: left;
+  color: #fff;
 }
 
 .menu {
@@ -166,6 +168,8 @@ header {
   padding: 2rem;
   transition: all 0.5s ease;
   cursor: pointer;
+  border-bottom-left-radius: 65px;
+  border-top-left-radius: 65px;
 }
 
 .option > p {
@@ -173,7 +177,7 @@ header {
 }
 
 .option:hover {
-  background-color: #d9dcd6 !important;
+  background-color: #f6f6f6 !important;
 }
 
 .option:hover > p {
@@ -185,7 +189,7 @@ header {
 }
 
 .option1 {
-  background-color: #d9dcd6;
+  background-color: #f6f6f6;
 }
 
 .option1 > .fa-user-plus {
@@ -217,10 +221,13 @@ th {
   padding: 2rem;
 }
 
-/* tr:nth-child(even) {
-  background-color: #1e5c80;
-} */
-
 tr:last-child td {
   border-bottom: 1px solid #d9dcd6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

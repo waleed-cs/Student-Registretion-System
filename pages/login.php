@@ -20,23 +20,19 @@ session_destroy();
 
 <Main>
 <section>
-        <div class="login_section">
-        <?php
-        require('C:\xampp\htdocs\Task2\pages\header.html');
-        ?>
-        <div class="form_parent  login-animate" id="login-animate">
-        <h1>Login</h1>
+        <div class="login_section login-animate" id="login-animate">
+        <a id="logo" class="logo" href="./homePage.php">SRMS</a>
         <form method="POST" action = "./authentication.php" autocomplete="off" >
-            <div class="form_input">
-                <label for="username">Username</label>
-                <input type="text" name="userr" id="username" required>
+            <div class="form_input" id="login-animate">
+                <input type="text" name="userr" id="username" required placeholder="Username/Email">
             </div>
             <div class="form_input">
-                <label for="password">password</label>
-                <input type="password" name="pwd" id="password" required>
+                <input type="password" name="pwd" id="password" required placeholder="Password">
             </div>
            <button type="submit">Login</button>
         </form>
+        <div>
+        
         <div><p class="error_message">
         <?php
         if (isset($_SESSION['Message']))
