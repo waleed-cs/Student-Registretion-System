@@ -9,8 +9,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-family: "Roboto", sans-serif;
-  background-color: #16425b;
-  color: #d9dcd6;
+  background-color: #f6f6f6;
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -30,6 +29,9 @@ body {
   transition: all 0.5s ease;
   text-decoration: none;
   color: #d9dcd6;
+  border-top-left-radius: 65px;
+  border-bottom-left-radius: 65px;
+  margin-left: 0.7rem;
 }
 
 .logout > div {
@@ -45,7 +47,7 @@ body {
 }
 
 .logout:hover {
-  background-color: #d9dcd6;
+  background-color: #f6f6f6;
 }
 
 .logout:hover > div > p {
@@ -78,6 +80,11 @@ header {
 
 .person > p {
   margin-left: 0.5rem;
+  color: #fff;
+}
+.person > i {
+  margin-left: 0.5rem;
+  color: #fff;
 }
 
 .option {
@@ -85,6 +92,10 @@ header {
   padding: 2rem;
   transition: all 0.5s ease;
   cursor: pointer;
+  border-top-left-radius: 65px;
+  border-bottom-left-radius: 65px;
+  margin-left: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 .option > p {
@@ -92,7 +103,7 @@ header {
 }
 
 .option:hover {
-  background-color: #d9dcd6 !important;
+  background-color: #f6f6f6 !important;
 }
 
 .option:hover > p {
@@ -104,7 +115,7 @@ header {
 }
 
 .option3 {
-  background-color: #d9dcd6;
+  background-color: #f6f6f6;
 }
 
 .option3 > i {
@@ -131,7 +142,6 @@ Main {
 
 .form_parent > .form_div {
   /* border: 2px solid #e2e8f0; */
-  background: #11364b;
   border-radius: 5px;
   padding: 2.4rem;
   width: fit-content;
@@ -142,15 +152,14 @@ Main {
 }
 
 button {
-  width: min-content;
+  width: 40%;
   padding: 0.75rem 2rem;
   margin: 1rem auto;
-  background-color: transparent;
+  background-color: #6c63ff;
   color: #d9dcd6;
   cursor: pointer;
-  border: 1px solid #6c63ff;
+  border: none;
   transition: all 0.5s ease;
-  border-radius: 20px;
   display: block;
 }
 
@@ -178,13 +187,14 @@ form > div > h4 {
 
 table {
   border-collapse: collapse;
+  color: #575555;
 }
 
 table,
 td,
 th {
   border-collapse: collapse;
-  border: 3px solid #d9dcd6;
+  border: 3px solid #575555;
 }
 
 td,
@@ -269,23 +279,6 @@ select {
 .form_input > label {
   margin-bottom: 0.5rem;
   text-transform: capitalize;
-}
-
-button {
-  width: min-content;
-  padding: 0.75rem 2rem;
-  margin: 1rem auto;
-  background-color: transparent;
-  color: #d9dcd6;
-  cursor: pointer;
-  border: 1px solid #6c63ff;
-  transition: all 0.5s ease;
-  border-radius: 20px;
-  display: block;
-}
-
-button:hover {
-  background-color: #6c63ff;
 }
 
 #gender {

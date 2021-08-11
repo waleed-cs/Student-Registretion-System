@@ -78,12 +78,6 @@
       }
       ?>
     </h3>
-    <h3 style="color:red; display:inline-block;" class="message"><?php 
-        if(isset($_SESSION['empty'])){
-          echo $_SESSION['empty'];
-        }
-        ?>
-      </h3>
     <section class="form_parent" >
       <div class="form_div">
         <h3>Courses Registration</h3>
@@ -107,80 +101,7 @@
       </form>
       </div>
     </section>
-    <section class="courses_parent" style="display:none;">
-      <h3 class="course_title">My Courses</h3>
-      <div class="line"></div>
-      <div class="courses">
-          <?php
-          if(mysqli_num_rows($result3) == 0){
-            echo "<h1>There is no courses registerd for this account</h1>";
-            echo "<script> document.querySelector('.course_title').style.display = 'none';</0script>";
-            echo "<script> document.querySelector('.line').style.display = 'none';</script>";
-            echo "<script> document.querySelector('.courses_parent').style.border = 'none';</script>";
-          }else{
-            echo "<script> document.querySelector('.course_title').style.display = '';</script>";
-            echo "<script> document.querySelector('.line').style.display = '';</script>";
-            echo "<script> document.querySelector('.courses_parent').style.border = '';</script>";
-            while($courses = mysqli_fetch_array($result3)){
-              echo "<div class='course'> $courses[0] </div>";
-              echo "<div class='line'> </div>";
-            }
-          }
-
-          ?>
-      </div>
-    </section>
-    <section class="settings" style="display:none;">
-
-    <div class="form_div">
-        <h3>Edit Profile</h3>
-        <form
-          method="post"
-          action="updateInfo.php"
-          autocomplete="off"
-        >
-          <div class="form">
-            <div class="form_input">
-              <label for="fname">first name</label>
-              <input type="text" id="fname" name="fname" value="<?php echo $fname;  ?>" required/>
-            </div>
-            <div class="form_input">
-              <label for="lname">last name</label>
-              <input type="text" id="lname" name="lname" value="<?php echo $lname;  ?>"/>
-            </div>
-            <div class="form_input">
-              <label for="nid">national id</label>
-              <input type="text" id="nid" name="nid"  maxlength = "10" value="<?php echo $nid;  ?>" />
-            </div>
-            <div class="form_input">
-              <label for="dob">date of brith</label>
-              <input type="date" id="dob" name="dob" value="<?php echo $row[3];  ?>"/>
-            </div>
-            <div class="form_input email">
-              <label for="email">email</label>
-              <input type="email" id="email" name="email" value="<?php echo $row[4];  ?>"/>
-            </div>
-            <div class="form_input">
-              <label>gender</label>
-              <select name="gender" id="gender">
-                <option value="<?php echo $row[5];?>" selected hidden><?php echo $row[5];?></option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </div>
-            <div class="form_input">
-              <label for="nid">New Password</label>
-              <input type="text" id="nid" name="password"/>
-            </div>
-            <div class="form_input">
-              <label for="nid">Confirm New Password</label>
-              <input type="text" id="nid" name="password2"/>
-            </div>
-          </div>
-          <button type="submit">Update</button>
-        </form>
-      </div>
-    </section>
+    
     </Main>
   </body>
   <script src="../js/studentDashboard.js"></script>
