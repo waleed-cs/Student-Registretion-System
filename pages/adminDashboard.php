@@ -53,11 +53,11 @@ $result = mysqli_query($conn,$query);
         }
         ?>
       </h3>
-      <h3 style="color:rgb(24, 189, 24); display:inline-block;" class="message"><?php 
+      <h3 style="color:rgb(32, 18, 58); display:inline-block; background-color:rgb(136, 255, 209); padding:1.5rem;" class="message success"><?php 
         // echo "<script> console.log('$_GET['true']') </script>";
         if(isset($_SESSION['success2'])){
-          $testing = $_SESSION['success2'];
-          echo $testing;
+          echo "<i class='far fa-check-circle'></i> {$_SESSION['success2']}";
+          echo "<script>document.querySelector('.success').classList.add('message_animate')</script>";
         }
         ?>
       </h3>
@@ -105,6 +105,7 @@ $result = mysqli_query($conn,$query);
     </section>
     <section class="student_table_parent"  style="display:none">
       <table>
+        <tbody>
         <tr>
           <th>First name</th>
           <th>Last name</th>
@@ -123,6 +124,7 @@ $result = mysqli_query($conn,$query);
           echo "<td>$student[5]</td> </tr>";
         }  ?>
         </tr>
+        </tbody>
       </table>
     </section>
     </Main>

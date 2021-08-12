@@ -20,7 +20,7 @@ if (isset($_POST)){
         $_SESSION['success2'] = "{$fname} {$lname} have registered in the database successfully.";
         header('Location:http://localhost/Task2/pages/adminDashboard.php');
     }else{
-        $_SESSION['Message'] = "{$fname} {$lname} have not registered in the database successfully.";
+        $_SESSION['Message'] = "{$fname} {$lname} Already registered in the database";
         header('Location:http://localhost/Task2/pages/adminDashboard.php');
     }
 

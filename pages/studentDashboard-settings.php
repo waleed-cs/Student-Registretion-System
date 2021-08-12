@@ -72,9 +72,10 @@
         }
         ?>
       </h3>
-    <h3 style="color:rgb(24, 189, 24); display:inline-block;" class="message"><?php 
+    <h3 style="color:rgb(32, 18, 58); display:inline-block; background-color:rgb(136, 255, 209); padding:1.5rem" class="message success"><?php 
       if(isset($_SESSION['success'])){
-        echo $_SESSION['success'];
+        echo " <i class='far fa-check-circle'></i>  {$_SESSION['success']}";
+        echo "<script>document.querySelector('.success').classList.add('message_animate')</script>";
       }
       ?>
     </h3>

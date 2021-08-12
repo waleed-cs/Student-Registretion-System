@@ -22,6 +22,7 @@ Main {
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .form_parent {
@@ -50,7 +51,12 @@ Main {
     transform: translateX(0);
   }
 }
-
+.fa-eye {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  color: #909193;
+}
 .login-animate {
   animation: 1s ease-in-out 0s 1 slideFromLeft;
 }

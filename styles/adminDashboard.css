@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -205,6 +206,12 @@ table {
   border-bottom: 2px solid #9fa09e;
 }
 
+.student_table_parent {
+  overflow-y: scroll;
+  height: 100vh;
+  padding: 1rem 0rem;
+}
+
 th {
   background-color: #a7b8c3;
   color: #3b4347;
@@ -230,4 +237,27 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.success {
+  position: absolute;
+  top: 10%;
+  transform: translateX(70rem);
+}
+
+.success.message_animate {
+  animation: 3s ease 0s 1 slideMessage;
+}
+
+@keyframes slideMessage {
+  0% {
+    transform: translateX(50rem);
+  }
+
+  75% {
+    transform: translateX(20rem);
+  }
+  100% {
+    transform: translateX(70rem);
+  }
 }

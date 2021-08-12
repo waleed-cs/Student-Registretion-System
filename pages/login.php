@@ -14,6 +14,8 @@ session_destroy();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Login</title>
 </head>
 <body>
@@ -28,6 +30,7 @@ session_destroy();
             </div>
             <div class="form_input">
                 <input type="password" name="pwd" id="password" required placeholder="Password">
+                <i class="fas fa-eye"></i>
             </div>
            <button type="submit">Login</button>
         </form>
@@ -64,6 +67,7 @@ session_destroy();
     </div>
     </section>
 </Main>
+<script src="../js/login.js"></script>
 </body>
 </html>
 
