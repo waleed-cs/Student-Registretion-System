@@ -161,3 +161,23 @@ header {
 .forget_container {
   margin-bottom: 1rem;
 }
+
+@media all and (max-width: 768px) {
+  .login_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image_section {
+    display: none;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form_input > input {
+    width: max-content;
+  }
+}

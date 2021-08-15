@@ -7,26 +7,27 @@
 
 header > a {
   text-decoration: none;
-  color: #d9dcd6;
+  color: #767676;
   font-weight: bold;
   background-color: transparent;
 }
 
 li > a {
   text-decoration: none;
-  color: #787878;
   margin-left: 1rem;
   transition: all 0.5s ease;
+  color: #767676;
 }
 
-ul {
+.nav {
   display: flex;
+  justify-content: space-around;
   list-style: none;
 }
 
 li > a:hover {
-  color: #9b9a9a;
-  border-bottom: 1px solid #9b9a9a;
+  color: #6b6b6b;
+  border-bottom: 1px solid #6b6b6b;
 }
 
 header {
@@ -35,6 +36,7 @@ header {
   align-items: center;
   height: 4rem;
   width: 90%;
+  color: #767676;
 }
 
 .logo {
@@ -43,5 +45,10 @@ header {
 
 .line {
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+  border: 1px solid rgba(255, 24, 24, 0);
+  background-color: #4b4b4b;
+}
+
+.nav.active {
+  transform: translateX(0%);
 }

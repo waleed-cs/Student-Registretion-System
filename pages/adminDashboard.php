@@ -25,21 +25,21 @@ $result = mysqli_query($conn,$query);
   </head>
   <body>
     <header>
-      <div class="person">
-      <i class="fas fa-user"></i>
-      <p><?php echo "welcome {$_SESSION['name']}";?> </p>
+      <div class="person h">
+        <i class="fas fa-user"></i>
+        <p><?php echo "{$_SESSION['name']}";?> </p>
       </div>
-      <div class="menu">
-        <div class="option option1" style="margin-bottom:1rem; margin-left:0.7rem;">
+      <div class="menu h">
+        <div class="option option1">
         <i class="fas fa-user-plus"></i>
         <p>Register Student</p>
         </div>
-        <div class="option option2" style="margin-left:0.7rem;">
+        <div class="option option2">
         <i class="fas fa-eye"></i>
         <p>View Students</p>
         </div>
       </div>
-      <a class="logout" href="./login.php" style="margin-left:0.7rem;">
+      <a class="logout h" href="./login.php">
         <div>
         <i class="fas fa-sign-out-alt"></i>
         <p>Logout</p>
