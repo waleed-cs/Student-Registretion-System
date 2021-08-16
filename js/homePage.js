@@ -17,6 +17,9 @@ scrollToTop = () => {
 
 const navFade = () => {
   const burgerButton = document.querySelector(".burger");
+  const line1 = document.querySelector(".line1");
+  const line2 = document.querySelector(".line2");
+  const line3 = document.querySelector(".line3");
   const nav = document.querySelector(".nav");
   const navLinks = document.querySelectorAll(".nav li");
   burgerButton.addEventListener("click", () => {
@@ -30,6 +33,9 @@ const navFade = () => {
         }s`;
       }
     });
+    line1.classList.toggle("toggle");
+    line2.classList.toggle("toggle");
+    line3.classList.toggle("toggle");
   });
 };
 

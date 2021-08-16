@@ -140,7 +140,6 @@ option {
 }
 
 header {
-  position: relative;
   height: 100%;
   width: 20vw;
   background-color: #11364b;
@@ -267,54 +266,50 @@ form {
   }
 }
 
+.burger > div {
+  width: 25px;
+  height: 3px;
+  background-color: #575555;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.burger {
+  padding: 0.01rem;
+  cursor: pointer;
+  display: none;
+}
+
 @media all and (max-width: 768px) {
   * {
     font-size: 1rem;
   }
   body {
-    height: 90vh;
+    height: 100vh;
+    width: 100vw;
   }
   header {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    height: 10vh;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  header > .h {
+    background-color: #f6f6f6;
+    position: relative;
     height: 100%;
-    overflow: hidden;
-    width: 0;
-    flex: 1 1 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .person {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 1.5rem;
   }
-
   .person > p {
     margin-top: 0.2rem;
   }
 
-  .menu {
-    display: flex;
-    flex-direction: row;
-  }
-
   .option {
     padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -333,18 +328,82 @@ form {
     margin: 0;
     height: 100%;
     border-radius: 0;
-    width: max-content;
+    width: 100%;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: cornflowerblue;
   }
   .logout > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .burger {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .line1.toggle {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: #f6f6f6;
+  }
+
+  .line2.toggle {
+    opacity: 0;
+  }
+  .line3.toggle {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: #f6f6f6;
+  }
+
+  .nav {
+    position: absolute;
+    left: 0;
+    top: 10vh;
+    z-index: 50;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div > .logout {
+    flex-grow: 1;
+  }
+  .nav.active {
+    transform: translateX(0%);
+  }
+
+  @keyframes navLinksFade {
+    from {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  header.active {
+    background-color: #11364b;
+  }
+
+  .student_table_parent {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100vh;
+    padding: 1rem 0rem;
+    width: 100%;
+  }
+
+  table {
+    height: auto;
+    width: 100%;
   }
 }

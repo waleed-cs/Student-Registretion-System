@@ -121,9 +121,10 @@ header {
 .burger > div {
   width: 25px;
   height: 3px;
-  background-color: #000;
+  background-color: rgb(146, 12, 12);
   margin: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .burger {
@@ -178,7 +179,6 @@ header {
     transform: translateX(100%);
     transition: all 0.5s ease-in;
     width: 50%;
-    z-index: 1000 !important;
   }
   .burger {
     display: block;
@@ -202,5 +202,16 @@ header {
     height: auto;
     display: flex;
     flex-direction: column;
+  }
+
+  .line1.toggle {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .line2.toggle {
+    opacity: 0;
+  }
+  .line3.toggle {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }

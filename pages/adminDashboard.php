@@ -25,6 +25,7 @@ $result = mysqli_query($conn,$query);
   </head>
   <body>
     <header>
+      <div class="nav">
       <div class="person h">
         <i class="fas fa-user"></i>
         <p><?php echo "{$_SESSION['name']}";?> </p>
@@ -39,12 +40,22 @@ $result = mysqli_query($conn,$query);
         <p>View Students</p>
         </div>
       </div>
-      <a class="logout h" href="./login.php">
+      <div>
+        <a class="logout h" href="./login.php">
         <div>
-        <i class="fas fa-sign-out-alt"></i>
+          <i class="fas fa-sign-out-alt"></i>
+        <div>
         <p>Logout</p>
         </div>
-      </a>
+        </a>
+      </div>
+        </div>
+      </div>
+      <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
     </header>
     <Main>
       <h3 style="color:red; display:inline-block;" class="message"><?php 
