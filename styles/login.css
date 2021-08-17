@@ -147,19 +147,14 @@ header {
   margin: 0;
 }
 
-.forget {
-  color: white;
-  margin: 1rem auto;
-}
-
 .line {
   width: 100%;
   border-bottom: 5px solid rgb(255, 255, 255);
   margin: 1rem 0;
 }
 
-.forget_container {
-  margin-bottom: 1rem;
+.image_section {
+  display: block;
 }
 
 @media all and (max-width: 768px) {

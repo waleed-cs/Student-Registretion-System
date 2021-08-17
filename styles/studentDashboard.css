@@ -28,7 +28,7 @@ body {
   cursor: pointer;
   transition: all 0.5s ease;
   text-decoration: none;
-  color: #d9dcd6;
+  color: #dbe1e4;
   border-top-left-radius: 65px;
   border-bottom-left-radius: 65px;
   margin-left: 0.7rem;
@@ -219,4 +219,50 @@ a {
 
 th {
   background-color: #a7b8c3;
+}
+
+.burger > div {
+  width: 25px;
+  height: 3px;
+  background-color: #575555;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.burger {
+  padding: 0.01rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media all and (max-width: 768px) {
+  * {
+    font-size: 1rem;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .burger > div {
+    display: block;
+  }
+  header {
+    height: 100vh;
+    width: 20vw;
+    background-color: #11364b;
+    float: left;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transform: translateX(-200%);
+  }
 }

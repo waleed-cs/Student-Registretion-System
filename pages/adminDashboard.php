@@ -26,27 +26,26 @@ $result = mysqli_query($conn,$query);
   <body>
     <header>
       <div class="nav">
-      <div class="person h">
-        <i class="fas fa-user"></i>
-        <p><?php echo "{$_SESSION['name']}";?> </p>
-      </div>
-      <div class="menu h">
-        <div class="option option1">
-        <i class="fas fa-user-plus"></i>
-        <p>Register Student</p>
+        <div class="person h">
+          <i class="fas fa-user"></i>
+          <p><?php echo "{$_SESSION['name']}";?> </p>
         </div>
-        <div class="option option2">
-        <i class="fas fa-eye"></i>
-        <p>View Students</p>
+        <div class="menu h">
+          <div class="option option1">
+          <i class="fas fa-user-plus"></i>
+          <p>Register Student</p>
+          </div>
+          <div class="option option2">
+          <i class="fas fa-eye"></i>
+          <p>View Students</p>
+          </div>
         </div>
-      </div>
-      <div>
+        <div>
         <a class="logout h" href="./login.php">
-        <div>
-          <i class="fas fa-sign-out-alt"></i>
-        <div>
-        <p>Logout</p>
-        </div>
+          <div>
+            <i class="fas fa-sign-out-alt"></i>
+            <p>Logout</p>
+          </div>
         </a>
       </div>
         </div>
@@ -55,7 +54,7 @@ $result = mysqli_query($conn,$query);
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
-        </div>
+      </div>
     </header>
     <Main>
       <h3 style="color:red; display:inline-block;" class="message"><?php 
@@ -105,8 +104,8 @@ $result = mysqli_query($conn,$query);
               <label>gender</label>
               <select name="gender" id="gender">
                 <option value="" selected disabled hidden></option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
               </select>
             </div>
             <button type="submit">Register</button>

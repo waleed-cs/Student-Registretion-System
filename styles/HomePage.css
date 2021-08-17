@@ -121,7 +121,7 @@ header {
 .burger > div {
   width: 25px;
   height: 3px;
-  background-color: rgb(146, 12, 12);
+  background-color: #575555;
   margin: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
