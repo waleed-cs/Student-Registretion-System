@@ -66,10 +66,8 @@
         </div>
         <div>
           <a class="logout" href="./login.php">
-            <div>
             <i class="fas fa-sign-out-alt"></i>
             <p>Logout</p>
-            </div>
           </a>
         </div>
       </div>

@@ -39,31 +39,38 @@
     <title>Student Dashboard</title>
   </head>
   <body>
-    <header>
-      <div class="person">
-      <i class="fas fa-user"></i>
-      <p><?php echo "{$fname} {$lname}";?> </p>
+  <header>
+      <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
       </div>
-      <div class="menu">
-        <a class="option option1" href="./studentDashboard.php">
-        <i class="fas fa-plus"></i>
-        <p>Enroll Courses</p>
-        </a>
-        <a class="option option2" href="./studentDashboard-myCourses.php">
-        <i class="fas fa-eye"></i>
-        <p>View Courses</p>
-        </a>
-        <a class="option option3" href="./studentDashboard-settings.php">
-        <i class="fas fa-cog"></i>
-        <p>Settings</p>
-        </a>
-      </div>
-      <a class="logout" href="./login.php">
-        <div>
-        <i class="fas fa-sign-out-alt"></i>
-        <p>Logout</p>
+      <div class="nav">
+        <div class="person">
+          <i class="fas fa-user"></i>
+          <p><?php echo "{$fname} {$lname}";?> </p>
         </div>
-      </a>
+        <div class="menu">
+          <a class="option option1" href="./studentDashboard.php">
+          <i class="fas fa-plus"></i>
+          <p>Enroll Courses</p>
+          </a>
+          <a class="option option2" href="./studentDashboard-myCourses.php">
+          <i class="fas fa-eye"></i>
+          <p>View Courses</p>
+          </a>
+          <a class="option option3" href="./studentDashboard-settings.php">
+          <i class="fas fa-cog"></i>
+          <p>Settings</p>
+          </a>
+        </div>
+        <div>
+          <a class="logout" href="./login.php">
+            <i class="fas fa-sign-out-alt"></i>
+            <p>Logout</p>
+          </a>
+        </div>
+      </div>
     </header>
     <Main>
       <h3 style="color:red; display:inline-block;" class="message"><?php 

@@ -50,11 +50,11 @@ body {
   background-color: #f6f6f6;
 }
 
-.logout:hover > div > p {
+.logout:hover > p {
   color: #334155;
 }
 
-.logout:hover > div > i {
+.logout:hover > i {
   color: #334155;
 }
 
@@ -247,6 +247,7 @@ th {
   }
   .burger {
     display: block;
+    margin: 0 auto;
   }
   header {
     height: 100vh;
@@ -258,11 +259,22 @@ th {
     flex-direction: column;
     justify-content: space-between;
   }
+  .menu {
+    margin-top: 6rem;
+    margin-bottom: 9rem;
+  }
+  .option {
+    border-radius: 0;
+  }
+  .logout {
+    border-radius: 0;
+  }
   .nav {
     display: none;
   }
   .nav.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   header.active {
     position: absolute;
@@ -271,5 +283,19 @@ th {
     width: 30%;
     opacity: 0.9;
     z-index: 100;
+  }
+  .line1.toggle {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .line2.toggle {
+    opacity: 0;
+  }
+  .line3.toggle {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  form > button {
+    width: 100%;
   }
 }
