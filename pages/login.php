@@ -49,8 +49,6 @@ session_destroy();
         ?>
         </p>
     </div>
-        <div class="line"></div>
-        <div class="forget_container"><a class="forget" href="./forgetPassword.php">Forget Password?</a></div>
     </div>
         </div>
     <div class="image_section image-animate" id="image-animate">

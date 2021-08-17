@@ -172,7 +172,15 @@ header {
     align-items: center;
   }
 
+  form {
+    width: 50%;
+  }
+
   .form_input > input {
-    width: max-content;
+    width: 100%;
+  }
+
+  form > button {
+    width: 100%;
   }
 }

@@ -44,6 +44,7 @@ const navFade = () => {
   const header = document.querySelector("header");
   burgerButton.addEventListener("click", () => {
     header.classList.toggle("active");
+    burgerButton.classList.toggle("active");
     nav.classList.toggle("active");
     navLinks.forEach((link, index) => {
       if (link.style.animation) {

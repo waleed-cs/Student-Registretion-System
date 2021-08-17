@@ -40,10 +40,15 @@
   </head>
   <body>
     <header>
+      <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
       <div class="nav">
         <div class="person">
-        <i class="fas fa-user"></i>
-        <p><?php echo "{$fname} {$lname}";?> </p>
+          <i class="fas fa-user"></i>
+          <p><?php echo "{$fname} {$lname}";?> </p>
         </div>
         <div class="menu">
           <a class="option option1" href="./studentDashboard.php">
@@ -59,17 +64,14 @@
           <p>Settings</p>
           </a>
         </div>
-        <a class="logout" href="./login.php">
-          <div>
-          <i class="fas fa-sign-out-alt"></i>
-          <p>Logout</p>
-          </div>
-        </a>
-      </div>
-      <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+        <div>
+          <a class="logout" href="./login.php">
+            <div>
+            <i class="fas fa-sign-out-alt"></i>
+            <p>Logout</p>
+            </div>
+          </a>
+        </div>
       </div>
     </header>
     <Main>
