@@ -12,6 +12,7 @@ if (isset($_POST)){
     $email = $_POST['email'];
     $gender = $_POST['gender'];
     $password = "{$nid}@gmail.com";
+    $password = password_hash($password, PASSWORD_DEFAULT);
     $query = "INSERT INTO student (fname,lname,national_id,dob,email,gender) VALUES('$fname', '$lname', $nid, '$dob', '$email', '$gender')";
     $query2 = "INSERT INTO users (username, password, usertype) VALUES('$email','$password', 0)";
     $result = mysqli_query($conn, $query);

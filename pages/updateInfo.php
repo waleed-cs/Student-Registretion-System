@@ -27,15 +27,17 @@ if(isset($_POST)){
     }else{
 
         if(trim($password) == '' && trim($confirmPassword) == ''){
-            $query = "UPDATE student SET fname = '$fname', lname = '$lname', national_id = '$nid', dob = '$dob', email = '$email', gender = '$gender' WHERE national_id = '$nidSession'";
-            $result = mysqli_query($conn, $query);
             $query2 = "UPDATE users SET username = '$email' WHERE username = '$emailSession'";
             $result2 = mysqli_query($conn, $query2);
+            $query = "UPDATE student SET fname = '$fname', lname = '$lname', national_id = '$nid', dob = '$dob', email = '$email', gender = '$gender' WHERE national_id = '$nidSession'";
+            $result = mysqli_query($conn, $query);
+            $_SESSION['name'] = $email;
             $_SESSION['success'] = "Your profile has been updated successfully";
             header('Location:http://localhost/Task2/pages/studentDashboard-settings.php');
         }else if(trim($password) == trim($confirmPassword)){
             $query = "UPDATE student SET fname = '$fname', lname = '$lname', national_id = '$nid', dob = '$dob', email = '$email', gender = '$gender' WHERE national_id = '$nidSession'";
             $result = mysqli_query($conn, $query);
+            $password = password_hash($password, PASSWORD_DEFAULT);
             $query2 = "UPDATE users SET username = '$email', password = '$password' WHERE username = '$emailSession'";
             $result2 = mysqli_query($conn, $query2);
             $_SESSION['success'] = "Your profile has been updated successfully";

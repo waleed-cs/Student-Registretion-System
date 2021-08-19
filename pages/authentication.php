@@ -5,11 +5,11 @@ $error = "The username or password you provided is incorrect. Please try again."
 if(isset($_POST)){
     $user = $_POST['userr'];
     $pass = $_POST['pwd'];
-    $query = "SELECT * FROM users where username = '$user' and password = '$pass' ";
+    $query = "SELECT * FROM users where username = '$user'";
     $result = mysqli_query($conn, $query);
     $count = mysqli_num_rows($result);  
-    if($count == 1){
-        $type = mysqli_fetch_array($result, MYSQLI_NUM);
+    $type = mysqli_fetch_array($result, MYSQLI_NUM);
+    if(password_verify($pass, $type[1])){
         $_SESSION['name'] = $type[0];
         if($type[2] == 1){
             header('Location:http://localhost/Task2/pages/adminDashboard.php');

@@ -23,8 +23,6 @@
   //show all the registerd courses
   $query3 = "SELECT course__name FROM take WHERE student_id = '$nid' ";
   $result3 = mysqli_query($conn,$query3);
-
-  $flag = True;
 ?>
 
 <!DOCTYPE html>
