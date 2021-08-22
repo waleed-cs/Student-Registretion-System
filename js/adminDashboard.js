@@ -46,13 +46,7 @@ const navFade = () => {
     header.classList.toggle("active");
     burgerButton.classList.toggle("active");
     nav.classList.toggle("active");
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = ``;
-      } else {
-        link.style.animation = `navLinksFade 0.5s ease forwards ${index / 7}s`;
-      }
-    });
+
     line1.classList.toggle("toggle");
     line2.classList.toggle("toggle");
     line3.classList.toggle("toggle");
